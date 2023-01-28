@@ -183,6 +183,8 @@ other related libraries. See origin for MBED port on <https://github.com/thomaso
  */
 #define USE_N2K_TEENSYX_CAN 8 
 
+#define USE_N2K_ESPIDF 9
+
 
 /***********************************************************************//**
   \def USE_N2K_CAN
@@ -213,9 +215,11 @@ other related libraries. See origin for MBED port on <https://github.com/thomaso
 #elif defined(__IMXRT1062__)
 #define USE_N2K_CAN USE_N2K_TEENSYX_CAN
 #else
-#define USE_N2K_CAN USE_N2K_MCP_CAN
+//#define USE_N2K_CAN USE_N2K_MCP_CAN
 #endif
 #endif
+
+#define USE_N2K_CAN USE_N2K_ESPIDF
 
 #if USE_N2K_CAN == USE_N2K_DUE_CAN
 // Use Arduino Due internal CAN with due_can library
@@ -267,6 +271,10 @@ tmbedStream serStream;
 #elif USE_N2K_CAN == USE_N2K_ESP32_CAN
 #include <NMEA2000_esp32.h>       // https://github.com/ttlappalainen/NMEA2000_esp32
 tNMEA2000 &NMEA2000=*(new tNMEA2000_esp32());
+
+#elif USE_N2K_CAN == USE_N2K_ESPIDF
+#include "../../main/nmea2000_espidf.h"       // https://github.com/ttlappalainen/NMEA2000_esp32
+tNMEA2000 &NMEA2000=*(new tNMEA2000_ESPIDF_CAN());
 
 #else  // Use USE_N2K_MCP_CAN
 // Use mcp_can library e.g. with Arduino Mega and external MCP2551 CAN bus chip

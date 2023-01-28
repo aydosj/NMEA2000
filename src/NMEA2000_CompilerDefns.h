@@ -52,7 +52,7 @@
  * \note Be aware that that the ISO Multipacket Support ist mandatory for
  * certified NMEA200 devices.
  */
-// #define N2K_NO_ISO_MULTI_PACKET_SUPPORT 1    //Uncomment as needed
+//#define N2K_NO_ISO_MULTI_PACKET_SUPPORT 1    //Uncomment as needed
 
 /***********************************************************************//**
  * \brief Deactivation of Group Function Support
@@ -64,7 +64,7 @@
  * \note Be aware that that Group Function Support ist mandatory for
  * certified NMEA200 devices. 
  */
-// #define N2K_NO_GROUP_FUNCTION_SUPPORT 1      //Uncomment as needed
+#define N2K_NO_GROUP_FUNCTION_SUPPORT 1      //Uncomment as needed
 
 /***********************************************************************//**
  * \brief Deactivation Heatbeat Support

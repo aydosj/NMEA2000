@@ -42,6 +42,17 @@
 
 /*************************************************************************//**
  * \enum tN2kNavigationDirection
+ * \brief Enumeration of the common true false type
+ */
+enum tN2kTrueFalse {
+                            N2ktf_false = 0,
+                            N2ktf_true = 1,
+                            N2ktf_error = 2,
+                            N2ktf_unknown = 3
+};
+
+/*************************************************************************//**
+ * \enum tN2kNavigationDirection
  * \brief Enumeration of the navigation direction according to PGN129285
  */
 enum tN2kNavigationDirection {
