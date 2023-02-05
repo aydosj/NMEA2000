@@ -211,7 +211,7 @@ other related libraries. See origin for MBED port on <https://github.com/thomaso
 #elif defined(__linux__)||defined(__linux)||defined(linux)
 #define USE_N2K_CAN USE_N2K_SOCKET_CAN
 #elif defined(ARDUINO_ARCH_ESP32) || defined(ESP32)
-#define USE_N2K_CAN USE_N2K_ESP32_CAN
+//#define USE_N2K_CAN USE_N2K_ESP32_CAN
 #elif defined(__IMXRT1062__)
 #define USE_N2K_CAN USE_N2K_TEENSYX_CAN
 #else
